@@ -46,6 +46,7 @@ ADD ./ThoughtsBackend/ /opt/code/
 ADD ./docker/db/* /opt/code/db/
 
 ## get the db ready
+RUN  chmod +x /opt/code/db/*.sh
 RUN /opt/code/db/prepare_db.sh
 
 # Start the database in normal operation
